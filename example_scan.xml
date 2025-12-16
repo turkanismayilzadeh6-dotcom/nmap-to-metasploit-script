@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -p 21,22,80,445 192.168.50.50 -oX example_scan.xml" start="1678886400">
+<host starttime="1678886400" endtime="1678886410">
+<status state="up" reason="echo-reply"/>
+<address addr="192.168.50.50" addrtype="ipv4"/>
+<ports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack"/><service name="ftp" product="vsftpd"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack"/><service name="ssh" product="OpenSSH"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack"/><service name="http" product="Apache httpd"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack"/><service name="microsoft-ds" product="Samba"/></port>
+</ports>
+</host>
+</nmaprun>

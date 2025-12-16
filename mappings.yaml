@@ -1,0 +1,34 @@
+﻿# mappings.yaml
+
+# This file maps common services (keys) to safe Metasploit auxiliary modules.
+ftp:
+  port: 21
+  modules:
+    - name: "auxiliary/scanner/ftp/ftp_version"
+      description: "Grabs the FTP server banner."
+    - name: "auxiliary/scanner/ftp/anonymous"
+      description: "Checks for anonymous login."
+ssh:
+  port: 22
+  modules:
+    - name: "auxiliary/scanner/ssh/ssh_version"
+      description: "Grabs the SSH server banner."
+http:
+  port: 80
+  modules:
+    - name: "auxiliary/scanner/http/http_version"
+      description: "Grabs the HTTP server banner."
+    - name: "auxiliary/scanner/http/robots_txt"
+      description: "Checks for robots.txt."
+smb:
+  port: 445
+  modules:
+    - name: "auxiliary/scanner/smb/smb_version"
+      description: "Gathers SMB version."
+    - name: "auxiliary/scanner/smb/smb_enumshares"
+      description: "Lists accessible SMB shares."
+snmp:
+  port: 161
+  modules:
+    - name: "auxiliary/scanner/snmp/snmp_enum"
+      description: "Enumerates SNMP info (default community strings)."
